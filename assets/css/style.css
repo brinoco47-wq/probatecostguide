@@ -1,0 +1,69 @@
+/* Probate Cost Guide — mobile-first, no frameworks */
+:root{
+  --ink:#1a2332; --muted:#5b6472; --line:#e3e7ee; --bg:#ffffff;
+  --soft:#f5f7fa; --accent:#1d4ed8; --accent-d:#1e40af; --warn:#b45309;
+  --radius:10px; --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* header */
+.site-header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.brand{font-weight:800;font-size:20px;color:var(--ink)}
+.brand span{color:var(--accent)}
+.main-nav a{margin-left:18px;font-size:15px;font-weight:600;color:var(--ink)}
+.main-nav a:hover{color:var(--accent)}
+/* hero */
+.hero{background:linear-gradient(180deg,#eef3ff, #fff);border-bottom:1px solid var(--line);padding:44px 0 36px}
+.hero h1{font-size:clamp(28px,4.5vw,44px);line-height:1.2;margin:0 0 12px}
+.hero p.lede{font-size:19px;color:var(--muted);max-width:720px;margin:0 0 18px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-block;background:var(--accent);color:#fff !important;font-weight:700;
+  padding:13px 22px;border-radius:var(--radius);min-height:44px}
+.btn:hover{background:var(--accent-d);text-decoration:none}
+.btn.ghost{background:#fff;color:var(--accent) !important;border:2px solid var(--accent)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:28px 0}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{margin:0 0 10px;color:var(--muted);font-size:15.5px}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--soft);font-weight:700}
+tr:hover td{background:#fafbfe}
+/* callouts */
+.notice{border-left:4px solid var(--warn);background:#fffbeb;padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:22px 0}
+.notice strong{display:block;margin-bottom:4px}
+.method{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:22px 0}
+.method h4{margin:0 0 8px}
+/* article */
+article.main{padding:30px 0 10px}
+article.main h2{margin-top:34px;font-size:26px}
+article.main h3{margin-top:26px;font-size:20px}
+.byline{color:var(--muted);font-size:14.5px;margin:-6px 0 18px}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:20px 0}
+.toc ol{margin:8px 0;padding-left:22px}
+/* faq */
+.faq details{border:1px solid var(--line);border-radius:var(--radius);margin:10px 0;padding:14px 18px}
+.faq summary{font-weight:700;cursor:pointer}
+/* footer */
+.site-footer{border-top:1px solid var(--line);margin-top:44px;background:#fafbfe}
+.site-footer .wrap{padding-top:28px;padding-bottom:28px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.foot-grid h4{margin:0 0 10px;font-size:15px}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid li{margin:6px 0;font-size:14.5px}
+.foot-base{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+/* breadcrumbs */
+.crumbs{font-size:14px;color:var(--muted);margin:18px 0 0}
+.crumbs a{color:var(--muted)}
+@media (max-width:640px){
+  .main-nav a{margin-left:12px;font-size:14px}
+  body{font-size:16px}
+}
